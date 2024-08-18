@@ -25,9 +25,9 @@ const PlayerList = ({ players, navigation, loadMore }) => (
 const getPlayerList = async (off = 0) => {
     try {
         const { data, offset } = await getPlayers(off);
-        return data ? { data, offset } : { savePlayers: 0 };
+        return data ? { data, offset } : { data: savePlayers, offset: 0 };
     } catch (e) {
-        return { savePlayers: 0 };
+        return { data: savePlayers, offset: 0 };
     }
 };
 

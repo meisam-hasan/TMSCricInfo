@@ -38,3 +38,5 @@ yarn-error.*
 #@mahin_hasan__TMSCricInfo.jks
 tms-cricinfo-key.json
 .env
+/ios
+/android
