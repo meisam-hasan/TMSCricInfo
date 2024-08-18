@@ -26,7 +26,7 @@ const MatchTypeDateRow = ({ match }) => (
 
 const Country = ({ country, image, direction = "row" }) => (
     <View style={{ ...styles.countryContainer, flexDirection: direction }}>
-        <CircleImage src={image} width={40} height={40} />
+        <CircleImage src={image} size={40} />
         <MediumBlackText
             style={{
                 ...(direction === "row-reverse"

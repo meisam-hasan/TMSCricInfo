@@ -47,7 +47,7 @@ function LiveScoreScreen() {
 
     const updateList = async () => {
         const { data, offset: off } = await getLiveScoreData();
-        //const { data, offset: off } = filteredMatches(matchSchedule);
+        //const { data, offset: off } = await getLiveScoreData();
         setCurrentMatches(data);
     };
 
@@ -58,7 +58,7 @@ function LiveScoreScreen() {
     const screenInit = async () => {
         setLoader(true);
         const { data, offset: off } = await getLiveScoreData();
-        //const { data, offset: off } = filteredMatches(matchSchedule);
+        //const { data, offset: off } = await getLiveScoreData();
         setCurrentMatches(data);
         setLoader(false);
         getLiveScore();

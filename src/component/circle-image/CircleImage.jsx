@@ -18,7 +18,7 @@ export default function CircleImage({ src, size }) {
                     ...styles.image,
                     ...(size && { borderRadius: size / 2 }),
                 }}
-                source={src ?? src}
+                source={src}
                 placeholder={{ blurhash }}
                 contentFit="cover"
                 transition={1000}
