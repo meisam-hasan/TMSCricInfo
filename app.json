@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "TMSCricInfo",
+    "slug": "TMSCricInfo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tms.cricinfo"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.READ_CALENDAR",
+        "android.permission.WRITE_CALENDAR"
+      ],
+      "package": "com.tms.cricinfo"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-calendar",
+        {
+          "calendarPermission": "The app needs to access your calendar.",
+          "remindersPermission": "The app needs to access your calendar."
+        }
+      ],
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "c7dc83ff-780c-4353-82d3-7e60a990aeef"
+      }
+    }
+  }
+}
