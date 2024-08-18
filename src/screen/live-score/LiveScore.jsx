@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { FlatList, StyleSheet, View } from "react-native";
+import { FlatList, StyleSheet, View, Platform } from "react-native";
 import Header from "../../component/header/Header";
 import ScoreCard from "../../component/score-card/ScoreCard";
 import LoaderScreen from "../../component/loader-screen/LoaderScreen";
 import matchSchedule from "../../lib/data/schedule";
 import { getCurrentMatches } from "../../lib/data/dataRequest";
+import Constants from "expo-constants";
 
 const MatchList = ({ matches }) => (
     <View style={styles.listContainer}>
@@ -85,6 +86,8 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         alignItems: "center",
         marginBottom: 70,
+        marginTop: Platform.OS === "android" ? Constants.statusBarHeight : 0,
+        backgroundColor: "white",
     },
     listContainer: {
         width: "100%",

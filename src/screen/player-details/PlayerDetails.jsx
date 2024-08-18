@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import PlayerDetails from "../../component/player-details/PlayerDetails";
 import playerDetails from "../../lib/data/player";
 import { getPlayer } from "../../lib/data/dataRequest";
+
 const getSelected = async (id) => {
     try {
         const selected = await getPlayer(id);

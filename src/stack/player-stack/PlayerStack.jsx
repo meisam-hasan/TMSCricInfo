@@ -19,7 +19,7 @@ const PlayerStackNavigator = () => (
             component={PlayerDetailsScreen}
             options={{
                 title: "Player",
-                //headerShown: false,
+                headerShown: true,
             }}
         />
     </PlayerStack.Navigator>

@@ -1,10 +1,11 @@
-import { FlatList, StyleSheet, View } from "react-native";
+import { FlatList, StyleSheet, View, Platform } from "react-native";
 import LoaderScreen from "../../component/loader-screen/LoaderScreen";
 import Header from "../../component/header/Header";
 import { useEffect, useState } from "react";
 import Player from "../../component/player/Player";
 import savePlayers from "../../lib/data/players";
 import { getPlayers } from "../../lib/data/dataRequest";
+import Constants from "expo-constants";
 
 const PlayerList = ({ players, navigation, loadMore }) => (
     <View style={styles.listContainer}>
@@ -81,6 +82,8 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         alignItems: "center",
         marginBottom: 70,
+        marginTop: Platform.OS === "android" ? Constants.statusBarHeight : 0,
+        backgroundColor: "white",
     },
     listContainer: {
         width: "100%",
