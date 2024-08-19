@@ -8,7 +8,7 @@ Clone the repo and install Node.js. Run the command `npm install`.
 
 ## API Setup
 
-Get an API key from [CricketData.org](https://cricketdata.org/) by logging in or creating a new account. Rename `.env.test` to `.env` and set the API key.
+Get an API key from [CricketData.org](https://cricketdata.org/) by logging in or creating a new account. Rename `.env.test` to `.env` and set the API key.Also need an to expo.
 
 ## Push Notification
 
@@ -24,7 +24,7 @@ You can send push notifications to users using the Expo push token from [this pa
 
 ## App Build
 
-Use the `eas build:configure` command to generate the `eas.json` file. After making the necessary modifications to this file, you can easily build the app for the Play Store or iOS.
+Use the `eas build:configure` command to generate the `eas.json` file. After making the necessary modifications to this file, you can easily build the app for the Play Store or iOS.Run this command to build `eas build --profile preview`
 
 ## Technical Discussion
 

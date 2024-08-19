@@ -52,11 +52,11 @@ function ScheduleScreen() {
     };
 
     const loadMoreAsync = async () => {
-        if (offset < totalRows) {
+        if (offset < (totalRows ?? 0)) {
             const { data, offset: off } = await getCurrentMatches(
                 parseInt(offset)
             );
-            if (off > 0) {
+            if ((off ?? 0) > 0) {
                 setCurrentMatches([...currentMatches, ...data]);
                 setOffset(offset + 50);
             }
