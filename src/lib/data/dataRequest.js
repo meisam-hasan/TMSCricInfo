@@ -1,6 +1,6 @@
 import instance from "../axios/api";
 
-const apiKey = process.env.EXPO_PUBLIC_API_URL;
+const apiKey = process.env.EXPO_PUBLIC_API_KEY;
 
 const get = async ({ url, offset = 0 }) => {
     return await instance.get(url + "apiKey=" + apiKey + "&offset=" + offset);
